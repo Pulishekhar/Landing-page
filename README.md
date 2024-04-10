@@ -1,1 +1,1 @@
-simpe landing page
+Quiz page
