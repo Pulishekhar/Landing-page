@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="quiz.css">
+<title>Quiz Platform</title>
+
+
+
+   
+</head>
+<body>
+<div class="container">
+    <h1>Create a Quiz</h1>
+    <form class="quiz-form" id="quizForm">
+        <div class="quiz-question">
+            <label for="question">Question:</label>
+            <input type="text" id="question" name="question" required>
+        </div>
+        <div class="quiz-options">
+            <label for="option1">Option 1:</label>
+            <input type="text" id="option1" name="option1" required>
+            <label for="option2">Option 2:</label>
+            <input type="text" id="option2" name="option2" required>
+            <label for="option3">Option 3:</label>
+            <input type="text" id="option3" name="option3" required>
+            <label for="option4">Option 4:</label>
+            <input type="text" id="option4" name="option4" required>
+        </div>
+        <div class="quiz-correct-answer">
+            <label for="correctAnswer">Correct Answer:</label>
+            <select id="correctAnswer" name="correctAnswer" required>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
+        </div>
+        <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+    <div class="quiz-result" id="quizResult"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const quizForm = document.getElementById('quizForm');
+        const quizResult = document.getElementById('quizResult');
+
+        quizForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Display success message
+            quizResult.textContent = 'Quiz submitted successfully!';
+            quizForm.reset(); // Reset form
+        });
+    });
+</script>
+
+</body>
+</html>
